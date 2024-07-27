@@ -46,7 +46,7 @@ jobs:
       run: cp ./scripts/*.sh ./deploy
 
     - name: Make zip file
-      run: zip -r ./coinTalk.zip ./deploy
+      run: zip -r ./golab.zip ./deploy
       shell: bash
 
     - name: Configure AWS credentials
@@ -57,7 +57,7 @@ jobs:
         aws-region: ap-northeast-2
 
     - name: Upload to S3
-      run: aws s3 cp --region ap-northeast-2 ./coinTalk.zip s3://$S3_BUCKET_NAME/
+      run: aws s3 cp --region ap-northeast-2 ./golab.zip s3://$S3_BUCKET_NAME/
 
 
 
@@ -71,5 +71,5 @@ jobs:
         --application-name golab \
         --deployment-group-name golab-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip[S3버킷 속 압축파일] \ 
+        --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip \
         --region ap-northeast-2
