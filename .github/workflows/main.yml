@@ -71,5 +71,8 @@ jobs:
         --application-name golab \
         --deployment-group-name golab-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip \ 
+        --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip \
         --region ap-northeast-2
+            --file-exists-behavior OVERWRITE \
+            --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip \ 
+            --region ap-northeast-2
