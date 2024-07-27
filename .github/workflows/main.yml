@@ -73,6 +73,3 @@ jobs:
         --file-exists-behavior OVERWRITE \
         --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip \
         --region ap-northeast-2
-            --file-exists-behavior OVERWRITE \
-            --s3-location bucket=golabgolab,bundleType=zip,key=golab.zip \ 
-            --region ap-northeast-2
